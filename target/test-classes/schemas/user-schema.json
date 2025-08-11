@@ -1,0 +1,84 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "User Schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer",
+      "description": "Unique identifier for the user"
+    },
+    "name": {
+      "type": "string",
+      "description": "Full name of the user"
+    },
+    "email": {
+      "type": "string",
+      "format": "email",
+      "description": "Email address of the user"
+    },
+    "phone": {
+      "type": "string",
+      "description": "Phone number of the user"
+    },
+    "website": {
+      "type": "string",
+      "format": "uri",
+      "description": "Website URL of the user"
+    },
+    "address": {
+      "type": "object",
+      "properties": {
+        "street": {
+          "type": "string",
+          "description": "Street address"
+        },
+        "suite": {
+          "type": "string",
+          "description": "Suite or apartment number"
+        },
+        "city": {
+          "type": "string",
+          "description": "City name"
+        },
+        "zipcode": {
+          "type": "string",
+          "description": "ZIP code"
+        },
+        "geo": {
+          "type": "object",
+          "properties": {
+            "lat": {
+              "type": "number",
+              "description": "Latitude coordinate"
+            },
+            "lng": {
+              "type": "number",
+              "description": "Longitude coordinate"
+            }
+          },
+          "required": ["lat", "lng"]
+        }
+      },
+      "required": ["street", "suite", "city", "zipcode", "geo"]
+    },
+    "company": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Company name"
+        },
+        "catchPhrase": {
+          "type": "string",
+          "description": "Company catch phrase"
+        },
+        "bs": {
+          "type": "string",
+          "description": "Company business strategy"
+        }
+      },
+      "required": ["name", "catchPhrase", "bs"]
+    }
+  },
+  "required": ["id", "name", "email", "phone", "website", "address", "company"]
+} 

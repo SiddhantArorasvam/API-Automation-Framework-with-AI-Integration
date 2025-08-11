@@ -1,0 +1,7 @@
+com/apiautomation/framework/tests/SimpleWorkingTest.class
+com/apiautomation/framework/utils/ApiUtils.class
+com/apiautomation/framework/config/ConfigManager.class
+com/apiautomation/framework/tests/MinimalWorkingTest.class
+com/apiautomation/framework/tests/SimpleTest.class
+com/apiautomation/framework/tests/WorkingAPITest.class
+com/apiautomation/framework/BaseTest.class
